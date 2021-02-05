@@ -37,7 +37,7 @@ module OmniAuth
         end
 
         def policy_host_name
-          'https://login.microsoftonline.com/te/%s/%s' % [tenant_name, policy_name]
+          '%s/%s/%s' % [host_name, tenant_name, policy_name]
         end
 
         def policy_authorization_endpoint

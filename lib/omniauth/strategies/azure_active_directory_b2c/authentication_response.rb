@@ -39,17 +39,7 @@ module OmniAuth
         end
 
         def user_info
-          {
-            name: id_token.raw_attributes['name'],
-            email: ([*id_token.raw_attributes['emails']].first),
-            nickname: id_token.raw_attributes['preferred_username'],
-            first_name: id_token.raw_attributes['given_name'],
-            last_name: id_token.raw_attributes['family_name'],
-            gender: id_token.raw_attributes['gender'],
-            image: id_token.raw_attributes['picture'],
-            phone: id_token.raw_attributes['phone_number'],
-            urls: { website: id_token.raw_attributes['website'] }
-          }
+          id_token.raw_attributes
         end
 
         def extra_info

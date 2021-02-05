@@ -51,7 +51,7 @@ module OmniAuth
       #########################################
 
       def policy_options
-        @policy_options ||= options.policy_options || (raise MissingOptionError, '`policy_options` not defined')
+        @policy_options ||= options.policy_options.to_hash || (raise MissingOptionError, '`policy_options` not defined')
       end
 
       def policy
