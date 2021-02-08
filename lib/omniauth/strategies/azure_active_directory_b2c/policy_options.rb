@@ -36,8 +36,12 @@ module OmniAuth
           raise MissingOptionError, '`policy_name` not defined'
         end
 
+        def policy_host
+          raise MissingOptionError, '`policy_host` not defined'
+        end
+
         def policy_host_name
-          '%s/%s/%s' % [host_name, tenant_name, policy_name]
+          '%s/%s/%s' % [host, tenant_name, policy_name]
         end
 
         def policy_authorization_endpoint
