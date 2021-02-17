@@ -39,6 +39,7 @@ module OmniAuth
             scope: policy.scope,
             state: state,
             nonce: nonce,
+            prompt: 'login',
           }
         end
 
