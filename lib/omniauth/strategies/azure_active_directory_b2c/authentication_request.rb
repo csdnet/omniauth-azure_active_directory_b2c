@@ -38,8 +38,7 @@ module OmniAuth
             response_type: response_type,
             scope: policy.scope,
             state: state,
-            nonce: nonce,
-            prompt: 'login',
+            nonce: nonce
           }
         end
 
